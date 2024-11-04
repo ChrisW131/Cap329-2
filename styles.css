@@ -1,11 +1,128 @@
-#winkpic img {
-    width: 35em;
-}
-
 #runpic img {
     width: 35em;
+    height: 35em;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50px;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    box-shadow: 0 0 10px #333;
 }
 
 #header {
-    color: red;
+    color: firebrick;
+    background-color: black;
+    font-size: 1.5em;
+    padding: 1em;
+    text-align: center;
+    text-shadow: white 1px 1px;
+    font-family: calibri;
+    border-radius: 50px;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#field {
+    background-image: url('assets/field.jpg');
+    height: 50em;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: auto;
+    margin: 10px auto;
+    /* border-radius: 100px; */
+    /* background-position: center */
+}
+#team {
+    background-image: url('assets/Wink.jpg');
+    height: 175em;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px auto;
+    padding: auto;
+    /* border-radius: 100px; */
+    /* background-position: center */
+}
+
+#field-text {
+    color: firebrick;
+    font-size: 3em;
+    text-align: center;
+    padding-top: 5em;
+    text-shadow: white 2px 2px;
+    font-family: calibri;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.navbar{
+    background: darkgoldenrod; font-family: calibri; padding-right: 15px;padding-left: 15px; padding-top: 15px; padding-bottom: 15px; margin-bottom: 0px; border-radius: 50px; box-shadow: 0 0 10px #333; margin-top: 0px; margin-bottom: 0px; z-index: 1; position: relative;
+}
+.navdiv{
+    display: flex; align-items: center; justify-content: space-between;
+}
+.logo a{
+    font-size: 35px; font-weight: 600; color: firebrick; text-shadow: black 2px 1px; text-decoration: none; font-family: calibri;
+}
+ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 999;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    font-family: calibri;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: black 1px 1px;
+    text-decoration: none;
+    color: white;
+    text-align: right;
+}
+ul li {
+    display: inline-block;
+    position: relative;
+}
+li{
+    list-style: none; display: inline-block;
+}
+li a{
+    color: white; font-size: 18px; font-weight: bold; margin-right: 25px; text-shadow: black 1px 1px;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+ul li ul.dropdown {
+    width: 100%;
+    bottom: red;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover {
+    background: firebrick;
+}
+ul li:hover ul.dropdown {
+    display: block;
+}
+button{
+    background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+}
+button a{
+    color: white; font-weight: bold; font-size: 15px;
 }
