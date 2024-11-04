@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .message-container {
+            margin-top: 20px;
+        }
+        .message {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #ffffff;
+        }
+        .message h5 {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-5">
+            <h1>Write a Letter to Your Future Self</h1>
+            <p>What do you want to remember in the future?</p>
+        </header>
+
+        <section>
+            <form id="futureMeForm">
+                <div class="mb-3">
+                    <label for="userMessage" class="form-label">Your Message</label>
+                    <textarea id="userMessage" class="form-control" rows="4" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="sendDate" class="form-label">Select a Future Date</label>
+                    <input type="date" id="sendDate" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Send to Future Me!</button>
+            </form>
+        </section>
+
+        <section class="message-container">
+            <h3>Your Future Messages</h3>
+            <div id="messagesList"></div>
+        </section>
+    </div>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('futureMeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const message = document.getElementById('userMessage').value;
+            const date = document.getElementById('sendDate').value;
+            const messagesList = document.getElementById('messagesList');
+
+            // Create a new message element
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+            messageDiv.innerHTML = `<h5>Message for ${date}:</h5><p>${message}</p>`;
+
+            // Append the new message to the list
+            messagesList.appendChild(messageDiv);
+
+            // Clear the form fields
+            this.reset();
+        });
+    </script>
+</body>
+</html>

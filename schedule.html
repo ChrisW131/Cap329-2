@@ -9,10 +9,12 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
+            padding-top: 20px;
         }
-        h1 {
+        h1, h3 {
             text-align: center;
             margin: 20px 0;
+            color: #343a40;
         }
         table {
             margin: 0 auto;
@@ -31,6 +33,23 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        .player-profile {
+            margin: 20px 0;
+        }
+        .player-card {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            transition: transform 0.2s;
+        }
+        .player-card:hover {
+            transform: scale(1.05);
+        }
+        .player-image {
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -47,27 +66,53 @@
             <tbody>
                 <tr>
                     <td>Week 1</td>
-                    <td>Fordham</td>
+                    <td>
+                        Vs.
+                        <br>
+                    Fordham Prep
+                        <br>
+                        40 - 28 W
+                    </td>
                     <td>Sept 14</td>
                 </tr>
                 <tr>
                     <td>Week 2</td>
-                    <td>Charminade</td>
+                    <td> @
+                        <br>
+                        Charminade HS
+                        <br>
+                        12 - 28 L
+                    </td>
                     <td>Sept 21</td>
                 </tr>
                 <tr>
                     <td>Week 3</td>
-                    <td>Farelll</td>
+                    <td> @
+                        <br>
+                        Monsignor Farell HS
+                        <br>
+                        6 - 14 L
+                    </td>
                     <td>Sept 28</td>
                 </tr>
                 <tr>
                     <td>Week 4</td>
-                    <td>Stepinac</td>
+                    <td> Vs.
+                        <br>
+                        Archbishop Stepinac HS
+                        <br>
+                        12 - 27 L
+                    </td>
                     <td>Oct 5</td>
                 </tr>
                 <tr>
                     <td>Week 5</td>
-                    <td>St. Joesph</td>
+                    <td> @
+                        <br>
+                        St. Joe's by the sea
+                        <br>
+                        20 - 30 L
+                    </td>
                     <td>Oct 12</td>
                 </tr>
                 <tr>
@@ -77,17 +122,79 @@
                 </tr>
                 <tr>
                     <td>Week 7</td>
-                    <td>St. Francis</td>
+                    <td>St. Francis Prep</td>
                     <td>Oct 26</td>
                 </tr>
                 <tr>
                     <td>Week 8</td>
-                    <td>Iona</td>
+                    <td>Iona Prep</td>
                     <td>Nov 2</td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    <section id="stats" class="text-center my-5">
+        <h3>Player Statistics</h3>
+        <table class="table table-bordered mx-auto" style="width: 80%;">
+            <thead>
+                <tr>
+                    <th>Statistic</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rushing Yards</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>Touchdowns</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Average Yards per Carry</td>
+                    <td>6.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="players" class="container player-profile">
+        <h3>Player Profiles</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="player-card">
+                    <img src="assets/player1.jpg" alt="Player 1" class="player-image">
+                    <div class="p-3">
+                        <h5>Player 1</h5>
+                        <p>Position: Running Back</p>
+                        <p>Bio: A quick and agile player with a knack for finding gaps in the defense.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="player-card">
+                    <img src="assets/player2.jpg" alt="Player 2" class="player-image">
+                    <div class="p-3">
+                        <h5>Player 2</h5>
+                        <p>Position: Quarterback</p>
+                        <p>Bio: Known for his strong arm and leadership on the field.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="player-card">
+                    <img src="assets/player3.jpg" alt="Player 3" class="player-image">
+                    <div class="p-3">
+                        <h5>Player 3</h5>
+                        <p>Position: Wide Receiver</p>
+                        <p>Bio: A speedy player who excels at making big plays down the field.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

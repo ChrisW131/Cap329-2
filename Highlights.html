@@ -8,6 +8,33 @@
     <style>
         body {
             background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .highlight-card {
+            background-color: white;
+            box-shadow: 0 0 10px #333;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .highlight-card:hover {
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .col-md-4 {
+            flex-basis: 30%;
+            margin-bottom: 20px;
         }
         .highlight-card {
             margin: 20px 0;
@@ -26,6 +53,33 @@
             margin: 10px;
             color: #555;
         }
+        @media (max-width: 768px) {
+            .col-md-4 {
+                flex-basis: 100%;
+            }
+        }
+        @media (max-width: 576px) {
+            .highlight-card {
+                margin: 10px 0;
+            }
+        }
+        .text-center {
+            text-align: center;
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px #333;
+            font-family: calibri;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: black 1px 1px;
+            text-decoration: none;
+            z-index: 1;
+            position: relative;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -35,23 +89,31 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="highlight-card">
-                    <img src="assets/highlight1.jpg" alt="Highlight 1">
-                    <h5>Highlight Title 1</h5>
-                    <p>Description of highlight 1. This can include details about the event and its significance.</p>
+                    <video src="assets/Punt.mp4" controls class="img-fluid rounded" width="100%" height="auto"></video>
+                    <h5>Punt Return</h5>
+                    <p>In a thrilling moment, the punt returner fields the ball cleanly at their own 20-yard line. With quick reflexes, they scan the field, spotting a seam in the coverage. As they sprint forward, they make an explosive cut to the left, evading the first would-be tackler.
+
+                        With incredible speed and agility, the returner navigates through defenders, using their vision to follow the blocking set up by teammates. A key block at the 50-yard line springs them free, allowing them to accelerate down the sideline. The crowd erupts as they cross midfield, leaving defenders in their wake.
+                        
+                        With only one defender left to beat, the returner executes a perfect juke move, dodging the tackle and racing towards the end zone. As they break into the clear, the adrenaline surges. With a final burst of speed, they cross into the end zone, securing a spectacular touchdown.
+                        
+                        The stadium erupts in cheers as the returner celebrates, showcasing their elation and the electrifying skill that turned a routine punt into a game-changing score.
+                    </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="highlight-card">
-                    <img src="assets/highlight2.jpg" alt="Highlight 2">
-                    <h5>Highlight Title 2</h5>
-                    <p>Description of highlight 2. This can include details about the event and its significance.</p>
+                    <video src="assets/Stretch.mp4" controls class="img-fluid rounded" width="100%" height="auto"></video>
+                    <h5>Stretch Run</h5>
+                    <p>As the quarterback begin to snap the ball, even with the defense jumping offsides, the running back takes the ball. Shedding the first tackle with ease and bounces it out to the left. Within the blink of an eye the running back in on the outside passing defenders on his way to a touchdown.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="highlight-card">
-                    <img src="assets/highlight3.jpg" alt="Highlight 3">
-                    <h5>Highlight Title 3</h5>
-                    <p>Description of highlight 3. This can include details about the event and its significance.</p>
+                    <video src="assets/Block.mp4" controls class="img-fluid rounded" width="100%" height="auto"></video>
+                    <h5>Do It All!</h5>
+                    <p>
+                        In a critical moment of the game, the running back took the handoff and burst through the line, showcasing impressive speed and agility. As he approached the second level of the defense, the second running back moved into the second level of the defense to provide extra blocking for his fellow back. Just when the other team had thought they pinned the bak to the sideline... BOOM! Big block by the running back opens the hole for his fellow back to score on a 50+ yard run.</p>
                 </div>
             </div>
         </div>
@@ -81,6 +143,19 @@
         </div>
     </div>
 
+    <section id="fan-comments" class="text-center my-5">
+        <h3>Fan Comments</h3>
+        <div class="container">
+            <textarea class="form-control" rows="3" placeholder="Leave a comment..."></textarea>
+            <button class="btn btn-primary mt-2">Submit</button>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
