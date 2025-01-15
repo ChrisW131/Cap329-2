@@ -6,12 +6,49 @@
     <title>Bird's Nest</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .hero {
+            background: url('assets/hero-banner.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .btn-cta {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .btn-cta:hover {
+            background-color: #e03c00;
+        }
+        .gallery img {
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Birds Nest</a>
+                <a class="navbar-brand" href="#">Bird's Nest</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -23,78 +60,104 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Highlights</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Game Highlights</a></li>
+                                <li><a class="dropdown-item" href="#">Player Spotlights</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="btn btn-dark" href="#">Sign In</a></li>
-                        <li class="nav-item"><a class="btn btn-dark" href="#">Sign Up</a></li>
+                        <li class="nav-item"><a class="btn btn-warning" href="#">Sign In</a></li>
+                        <li class="nav-item"><a class="btn btn-warning" href="#">Sign Up</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
-    <main class="container">
-        <section id="field" class="text-center my-5">
-            <div id="field-text" class="my-5">
-                <h5>WELCOME TO THE</h5>
-                <h1>BIRD'S NEST</h1>
-                <h2>A fansite for the future #1 draft pick in the 2030 class!</h2>
-            </div>
-        </section>
-        
-        <section id="header" class="text-center my-5">
-            <h1>HAYES HEISMAN</h1>
-            <h2>Welcome to the page where the next best running back in New York will show you why he belongs!</h2>
-        </section>
-        
-        <section id="hayes" class="text-center">
-            <img src="assets/Hayes.jpg" alt="Hayes running with the football" class="img-fluid rounded">
-            <p>Even after a great win theres always room for improvement</p>
-        </section>
-        
-        <section id="runpic" class="text-center my-5">
-            <img src="assets/OTR.jpg" alt="Hayes celebrating a touchdown" class="img-fluid rounded">
-            <p>Stretch right or left, home is what's next!</p>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to Bird's Nest</h1>
+            <p>A fansite for the future #1 draft pick in the 2030 class!</p>
+            <a href="#highlights" class="btn btn-cta">View Highlights</a>
         </section>
 
-        <section id="highlights" class="text-center my-5">
-            <h3>Latest Highlights</h3>
-            <ul id="highlight-list" class="list-unstyled"></ul>
+        <!-- About Section -->
+        <section class="container my-5 text-center">
+            <h2>About Hayes Heisman</h2>
+            <p>Discover the journey of the next best running back in New York. With unmatched skills and a relentless drive, Hayes Heisman is set to dominate the field and inspire fans around the world.</p>
+        </section>
+
+        <!-- Latest Highlights -->
+        <section id="highlights" class="container my-5">
+            <h3 class="text-center">Latest Highlights</h3>
+            <ul class="list-unstyled">
+                <li>🏈 200+ rushing yards in last week's game.</li>
+                <li>🎥 Check out the latest touchdown highlight reel.</li>
+                <li>🔥 Voted Player of the Week for the second time this season.</li>
+            </ul>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section id="events" class="container my-5">
+            <h3 class="text-center">Upcoming Matches</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Opponent</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Oct 19</td>
+                        <td>Holy Cross</td>
+                        <td>Home</td>
+                    </tr>
+                    <tr>
+                        <td>Oct 26</td>
+                        <td>St. Francis Prep</td>
+                        <td>Away</td>
+                    </tr>
+                    <tr>
+                        <td>Nov 2</td>
+                        <td>Iona Prep</td>
+                        <td>Home</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="container my-5">
+            <h3 class="text-center">Gallery</h3>
+            <div class="row gallery">
+                <div class="col-md-4 mb-3">
+                    <img src="assets/Wink.jpg" class="img-fluid rounded" alt="Gallery Image 1">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="assets/gallery2.jpg" class="img-fluid rounded" alt="Gallery Image 2">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="assets/gallery3.jpg" class="img-fluid rounded" alt="Gallery Image 3">
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Links -->
+        <section id="social-media" class="text-center my-5">
+            <h3>Follow Us</h3>
+            <div>
+                <a href="#" class="btn btn-outline-primary mx-2">Facebook</a>
+                <a href="#" class="btn btn-outline-info mx-2">Twitter</a>
+                <a href="#" class="btn btn-outline-danger mx-2">Instagram</a>
+            </div>
         </section>
     </main>
-
-    <section id="gallery" class="text-center my-5">
-        <h3>Gallery</h3>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="assets/Wink.jpg" class="img-fluid" alt="Gallery Image 1">
-            </div>
-            <div class="col-md-4">
-                <img src="assets/gallery2.jpg" class="img-fluid" alt="Gallery Image 2">
-            </div>
-            <div class="col-md-4">
-                <img src="assets/gallery3.jpg" class="img-fluid" alt="Gallery Image 3">
-            </div>
-        </div>
-    </section>
-    
-
-    <section id="social-media" class="text-center my-5">
-        <h3>Follow Us</h3>
-        <a href="#" class="btn btn-outline-primary">Facebook</a>
-        <a href="#" class="btn btn-outline-info">Twitter</a>
-        <a href="#" class="btn btn-outline-danger">Instagram</a>
-    </section>
-    
 
     <footer class="text-center py-4">
         <p>&copy; 2024 Bird's Nest. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
